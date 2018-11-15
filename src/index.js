@@ -112,7 +112,7 @@ module.exports = {
     // 函数圆括号之前有一个空格
     'space-before-function-paren': [2, {
       anonymous: 'always',
-      named: 'always',
+      named: 'never',
       asyncArrow: 'always',
     }],
 

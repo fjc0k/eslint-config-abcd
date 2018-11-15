@@ -13,7 +13,7 @@ export interface YY {
   xx?: boolean,
 }
 
-export function getType (value: any): string {
+export function getType(value: any): string {
   return Object.prototype.toString.call(value)
 }
 
@@ -22,11 +22,11 @@ export class MyClass {
 
   private yy = 2
 
-  public foo () {
+  public foo() {
     //...
   }
 
-  public bar () {
+  public bar() {
     //...
   }
 }
@@ -54,7 +54,7 @@ export default class Disposer {
    * @param name 待处置项目名称
    * @param dispose 处置行为
    */
-  public add (name: DisposerItemName, dispose: Dispose | Dispose[]): void {
+  public add(name: DisposerItemName, dispose: Dispose | Dispose[]): void {
     dispose = Array.isArray(dispose) ? dispose : [dispose]
     this.jar[name] = [
       ...(this.jar[name] || []),
@@ -67,7 +67,7 @@ export default class Disposer {
    *
    * @param name 欲处置项目名称
    */
-  public dispose (name: DisposerItemName): void {
+  public dispose(name: DisposerItemName): void {
     (this.jar[name] || /* istanbul ignore next */ []).forEach(dispose => dispose())
     delete this.jar[name]
   }
@@ -75,7 +75,7 @@ export default class Disposer {
   /**
    * 处置所有未处置项目。
    */
-  public disposeAll<T> (): void {
+  public disposeAll<T>(): void {
     for (const key in this.jar) {
       this.dispose(key)
     }
@@ -91,7 +91,7 @@ export default class Disposer {
 export function forOwn<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
-> (
+>(
   obj: T,
   callback: (value: T[K], key: K, obj: T) => any
 ): void {

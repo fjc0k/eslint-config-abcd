@@ -28,7 +28,7 @@ const noop = () => {}
 
 console.log(noop)
 
-function yyx () {
+function yyx() {
   return 1 + 1
 }
 
@@ -47,11 +47,11 @@ if (yyx) {
 class MyClass {
   static x = 1
 
-  foo () {
+  foo() {
     //...
   }
 
-  bar () {
+  bar() {
     //...
   }
 }
