@@ -35,6 +35,9 @@ module.exports = {
     // 使用两个空格缩进
     'indent': [2, 2, { SwitchCase: 1 }],
 
+    // 禁止空块语句，除了 catch
+    'no-empty': [2, { allowEmptyCatch: true }],
+
     // 字符串使用单引号，允许使用反勾号
     'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
@@ -154,7 +157,7 @@ module.exports = {
     'object-curly-newline': [2, { multiline: true }],
 
     // 如果函数的任一参数有换行，则要求在函数括号内换行。否则禁止换行
-    'function-paren-newline': [2, 'multiline'],
+    'function-paren-newline': [2, 'consistent'],
 
     // 要求 Switch 语句中有 Default 分支
     'default-case': 2,
@@ -186,7 +189,10 @@ module.exports = {
       'groups': ['internal', 'builtin', 'external', 'parent', 'sibling', 'index'],
     }],
     'import/newline-after-import': 2,
-    'sort-imports': 2,
+
+    // 其他
+    'no-control-regex': 0,
+    'no-case-declarations': 0,
   },
   overrides: [
     {
@@ -196,6 +202,7 @@ module.exports = {
         'typescript',
       ],
       rules: {
+        'no-undef': 0,
         'no-unused-vars': 0,
         'typescript/class-name-casing': 2,
         'typescript/explicit-function-return-type': [2, { allowExpressions: true }],
@@ -206,6 +213,7 @@ module.exports = {
         }],
         'typescript/no-angle-bracket-type-assertion': 2,
         'typescript/type-annotation-spacing': 2,
+        'typescript/explicit-member-accessibility': 2,
       },
     },
   ],

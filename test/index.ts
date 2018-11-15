@@ -18,7 +18,7 @@ export function getType (value: any): string {
 }
 
 export class MyClass {
-  static x = 1
+  public static x = 1
 
   private yy = 2
 
@@ -26,7 +26,7 @@ export class MyClass {
     //...
   }
 
-  bar () {
+  public bar () {
     //...
   }
 }
