@@ -91,10 +91,7 @@ export default class Disposer {
 export function forOwn<
   T extends { [key: string]: any },
   K extends Extract<keyof T, string>
->(
-  obj: T,
-  callback: (value: T[K], key: K, obj: T) => any
-): void {
+>(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
@@ -132,4 +129,24 @@ switch (x) {
   case 2:
   default:
     console.log(2)
+}
+
+const OBJ = {
+  x: 1,
+}
+
+export function p(): Promise<{
+  x: number,
+}> {
+  return Promise.resolve({ x: 1 })
+}
+
+class Component<T> {}
+
+export class Button extends Component<{
+
+  }> {
+  public constructor() {
+    super()
+  }
 }

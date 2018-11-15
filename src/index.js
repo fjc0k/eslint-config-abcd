@@ -153,10 +153,10 @@ module.exports = {
     // 将对象的属性放在不同的行上，但允许将所有的放在一行上
     'object-property-newline': [2, { allowAllPropertiesOnSameLine: true }],
 
-    // 如果在属性内部或属性之间有换行符，就要求有换行符
-    'object-curly-newline': [2, { multiline: true }],
+    // 对象换行
+    'object-curly-newline': [2, { consistent: true }],
 
-    // 如果函数的任一参数有换行，则要求在函数括号内换行。否则禁止换行
+    // 函数参数换行
     'function-paren-newline': [2, 'consistent'],
 
     // 要求 Switch 语句中有 Default 分支
