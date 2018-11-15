@@ -7,6 +7,23 @@ module.exports = {
   extends: [
     'eslint:recommended',
   ],
+  plugins: [
+    'import',
+  ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: [
+          '.js',
+          '.jsx',
+          '.json',
+          '.ts',
+          '.tsx',
+          '.vue',
+        ],
+      },
+    },
+  },
   env: {
     browser: true,
     node: true,
@@ -102,9 +119,6 @@ module.exports = {
     // 箭头函数周围应有空格
     'arrow-spacing': 2,
 
-    // 导入排序
-    'sort-imports': 2,
-
     // 禁止出现多个空格
     'no-multi-spaces': 2,
 
@@ -141,6 +155,38 @@ module.exports = {
 
     // 如果函数的任一参数有换行，则要求在函数括号内换行。否则禁止换行
     'function-paren-newline': [2, 'multiline'],
+
+    // 要求 Switch 语句中有 Default 分支
+    'default-case': 2,
+
+    // 禁止在 else 前有 return
+    'no-else-return': 2,
+
+    // 小数点前后应不为空
+    'no-floating-decimal': 2,
+
+    // new 规范化
+    'no-new': 2,
+    'no-new-func': 2,
+    'no-new-wrappers': 2,
+    'new-parens': 2,
+
+    // 禁用不必要的 return await
+    'no-return-await': 2,
+
+    // 禁止可以表达为更简单结构的三元操作符
+    'no-unneeded-ternary': 2,
+
+    // import
+    'import/no-unresolved': 2,
+    'import/no-cycle': 2,
+    'import/first': 2,
+    'import/order': [2, {
+      'newlines-between': 'never',
+      'groups': ['internal', 'builtin', 'external', 'parent', 'sibling', 'index'],
+    }],
+    'import/newline-after-import': 2,
+    'sort-imports': 2,
   },
   overrides: [
     {
@@ -150,6 +196,7 @@ module.exports = {
         'typescript',
       ],
       rules: {
+        'no-unused-vars': 0,
         'typescript/class-name-casing': 2,
         'typescript/explicit-function-return-type': [2, { allowExpressions: true }],
         'typescript/member-delimiter-style': [2, {

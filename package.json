@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESLint config.",
   "main": "src/index.js",
   "homepage": "https://github.com/fjc0k/eslint-config-io",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-typescript": "^0.13.0",
     "typescript-eslint-parser": "^21.0.0"
   }

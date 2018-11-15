@@ -1,10 +1,12 @@
 const x = 1
 
-console.log(x)
+console.log(x, 1)
 
 alert(1)
 
-new Promise(() => {})
+const x3 = new Promise(() => {})
+
+console.log(x3)
 
 const obj1 = { x: 1 }
 
