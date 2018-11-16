@@ -18,6 +18,7 @@ module.exports = {
           '.jsx',
           '.json',
           '.ts',
+          '.d.ts',
           '.tsx',
           '.vue',
         ],
