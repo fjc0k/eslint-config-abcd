@@ -208,7 +208,7 @@ module.exports = {
         'no-undef': 0,
         'no-unused-vars': 0,
         'typescript/class-name-casing': 2,
-        'typescript/explicit-function-return-type': [2, { allowExpressions: true }],
+        'typescript/explicit-function-return-type': 0,
         'typescript/member-delimiter-style': [2, {
           delimiter: 'comma',
           requireLast: true,
