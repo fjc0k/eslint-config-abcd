@@ -208,7 +208,6 @@ module.exports = {
         'no-undef': 0,
         'no-unused-vars': 0,
         'typescript/class-name-casing': 2,
-        'typescript/explicit-function-return-type': 0,
         'typescript/member-delimiter-style': [2, {
           delimiter: 'comma',
           requireLast: true,
@@ -216,7 +215,6 @@ module.exports = {
         }],
         'typescript/no-angle-bracket-type-assertion': 2,
         'typescript/type-annotation-spacing': 2,
-        'typescript/explicit-member-accessibility': 2,
       },
     },
   ],
