@@ -9,6 +9,7 @@ module.exports = {
   ],
   plugins: [
     'import',
+    'react',
   ],
   settings: {
     'import/resolver': {
@@ -84,7 +85,13 @@ module.exports = {
     'no-console': 0,
 
     // 数组或对象多行时应有拖尾逗号
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': [2, {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+    }],
 
     // 如果数组元素内或元素间有换行，则要求换行
     'array-bracket-newline': [2, 'consistent'],
@@ -134,9 +141,6 @@ module.exports = {
 
     // 要求构造函数首字母大写
     'new-cap': 2,
-
-    // JSX 单引号
-    'jsx-quotes': [2, 'prefer-single'],
 
     // 文件末尾保留一行空行
     'eol-last': [2, 'always'],
@@ -196,25 +200,79 @@ module.exports = {
     // 其他
     'no-control-regex': 0,
     'no-case-declarations': 0,
+
+    // react
+    'jsx-quotes': [2, 'prefer-single'],
+    'react/jsx-closing-bracket-location': [2, {
+      selfClosing: 'line-aligned',
+      nonEmpty: 'after-props',
+    }],
+    'react/jsx-boolean-value': [2, 'always'],
+    'react/self-closing-comp': [2, {
+      component: true,
+      html: true,
+    }],
+    'react/jsx-closing-tag-location': 2,
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-handler-names': [2, {
+      eventHandlerPrefix: 'handle',
+      eventHandlerPropPrefix: 'on',
+    }],
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-curly-spacing': [2, {
+      when: 'never',
+      children: true,
+    }],
+    'react/jsx-equals-spacing': [2, 'never'],
+    'react/jsx-pascal-case': 2,
+    'react/jsx-space-before-closing': 2,
+    'react/jsx-tag-spacing': [2, {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+      beforeClosing: 'never',
+    }],
+    'react/jsx-uses-vars': 2,
+    'react/jsx-wrap-multilines': [2, {
+      declaration: 'parens-new-line',
+      assignment: 'parens-new-line',
+      return: 'parens-new-line',
+      arrow: 'parens-new-line',
+      condition: 'parens-new-line',
+      logical: 'parens-new-line',
+      prop: 'parens-new-line',
+    }],
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
-      parser: 'typescript-eslint-parser',
+      parser: '@typescript-eslint/parser',
       plugins: [
-        'typescript',
+        '@typescript-eslint',
       ],
       rules: {
         'no-undef': 0,
-        'no-unused-vars': 0,
-        'typescript/class-name-casing': 2,
-        'typescript/member-delimiter-style': [2, {
-          delimiter: 'comma',
-          requireLast: true,
-          ignoreSingleLine: true,
+        '@typescript-eslint/adjacent-overload-signatures': 2,
+        '@typescript-eslint/class-name-casing': 2,
+        '@typescript-eslint/member-delimiter-style': [2, {
+          singleline: {
+            delimiter: 'comma',
+            requireLast: false,
+          },
+          multiline: {
+            delimiter: 'comma',
+            requireLast: true,
+          },
         }],
-        'typescript/no-angle-bracket-type-assertion': 2,
-        'typescript/type-annotation-spacing': 2,
+        '@typescript-eslint/no-angle-bracket-type-assertion': 2,
+        '@typescript-eslint/type-annotation-spacing': 2,
+        'indent': 0,
+        '@typescript-eslint/indent': [2, 2],
+        'no-unused-vars': 0,
+        '@typescript-eslint/no-unused-vars': [2, {
+          argsIgnorePattern: '^_',
+        }],
       },
     },
   ],

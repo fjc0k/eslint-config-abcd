@@ -1,7 +1,6 @@
 import './eff'
 import './x.css'
-import { join, relative, resolve } from 'path'
-import fn from './fn'
+import { relative } from 'path'
 
 console.log(relative)
 
@@ -18,7 +17,7 @@ export function getType(value: any): string {
 }
 
 export class MyClass {
-  public static x = 1
+  static x = 1
 
   private yy = 2
 
@@ -90,8 +89,11 @@ export default class Disposer {
  */
 export function forOwn<
   T extends { [key: string]: any },
-  K extends Extract<keyof T, string>
->(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
+  K extends Extract<keyof T, string>,
+>(
+  obj: T,
+  callback: (value: T[K], key: K, obj: T) => any,
+): void {
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
@@ -131,10 +133,6 @@ switch (x) {
     console.log(2)
 }
 
-const OBJ = {
-  x: 1,
-}
-
 export function p(): Promise<{
   x: number,
 }> {
@@ -145,7 +143,7 @@ class Component<T> {}
 
 export class Button extends Component<{
 
-  }> {
+}> {
   public constructor() {
     super()
   }

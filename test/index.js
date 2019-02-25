@@ -21,7 +21,7 @@ const obj = {
 console.log(
   obj,
   obj1, 22,
-  arr, 666, 555, 555
+  arr, 666, 555, 555,
 )
 
 const noop = () => {}
