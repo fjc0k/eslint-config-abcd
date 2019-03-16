@@ -203,6 +203,7 @@ module.exports = {
 
     // react
     'jsx-quotes': [2, 'prefer-single'],
+    'react/jsx-uses-react': 2,
     'react/jsx-closing-bracket-location': [2, {
       selfClosing: 'line-aligned',
       nonEmpty: 'after-props',
