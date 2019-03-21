@@ -8,6 +8,7 @@ module.exports = {
     'eslint:recommended',
   ],
   plugins: [
+    'sort-imports-es6-autofix',
     'import',
     'react',
   ],
@@ -186,6 +187,11 @@ module.exports = {
     'no-unneeded-ternary': 2,
 
     // import
+    'sort-imports-es6-autofix/sort-imports-es6': [2, {
+      ignoreCase: true,
+      ignoreMemberSort: false,
+      memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+    }],
     'import/no-unresolved': 2,
     'import/no-cycle': 2,
     'import/first': 0,
