@@ -1,7 +1,5 @@
 import './fn'
-import Zs from 'react'
 import React from 'react'
-import Av from 'react'
 
 export default class X extends React.Component {
   static yyy = 3
