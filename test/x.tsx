@@ -1,6 +1,25 @@
-const Com = () => {}
+import React from 'react'
 
-export default class X {
+export default class X extends React.Component {
+  static yyy = 3
+
+  static ff() {}
+
+  static y2yy = 3
+
+  xd = 1
+
+  get ppp() {
+    return 1
+  }
+
+  componentWillMount() {
+  }
+
+  x() {
+
+  }
+
   mounted() {
     try {
       const x = 1
@@ -10,21 +29,26 @@ export default class X {
     }
   }
 
+  handleFF() {}
+
+  renderTTd() {}
+
+  renderTT() {}
+
   render() {
     return (
       <div>
         <span />
-        <span z='dd' x={true} y={`${1}d`}>
+        <span id='dd' onClick={() => {}}>
           hello
+          {[1, 2].map(x => (
+            <div key={x} className='dd' id='dd'>{x}</div>
+          ))}
           <div />
         </span>
-        <div
-          render={
-            (_, _ignored) => <span {...{ x: 1 }} />
-          }>
+        <div>
           hello
         </div>
-        <Com />
       </div>
     )
   }

@@ -191,7 +191,14 @@ module.exports = {
     'import/first': 0,
     'import/order': [2, {
       'newlines-between': 'never',
-      'groups': ['internal', 'builtin', 'external', 'parent', 'sibling', 'index'],
+      'groups': [
+        'internal',
+        'builtin',
+        'external',
+        'parent',
+        'sibling',
+        'index',
+      ],
     }],
     'import/newline-after-import': 2,
     'import/prefer-default-export': 0,
@@ -242,6 +249,27 @@ module.exports = {
       condition: 'parens-new-line',
       logical: 'parens-new-line',
       prop: 'parens-new-line',
+    }],
+    'react/jsx-key': 2,
+    'react/no-array-index-key': 2,
+    'react/react-in-jsx-scope': 2,
+    'react/jsx-sort-props': [2, {
+      callbacksLast: true,
+      noSortAlphabetically: true,
+      reservedFirst: true,
+    }],
+    'react/sort-comp': [2, {
+      order: [
+        'static-methods',
+        'instance-variables',
+        'getters',
+        'setters',
+        'lifecycle',
+        'everything-else',
+        '/^handle[A-Z].+$/',
+        '/^render[A-Z].+$/',
+        'render',
+      ],
     }],
   },
   overrides: [
