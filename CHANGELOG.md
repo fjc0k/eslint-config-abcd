@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.4.0](https://github.com/fjc0k/eslint-config-io/compare/v0.3.0...v0.4.0) (2019-03-21)
+
+
+### Features
+
+* add sort-imports-es6-autofix/sort-imports-es6 ([e7cad60](https://github.com/fjc0k/eslint-config-io/commit/e7cad60))
+
+
+
 # 0.3.0 (2019-03-21)
 
 
