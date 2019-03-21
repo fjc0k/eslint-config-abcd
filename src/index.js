@@ -195,17 +195,7 @@ module.exports = {
     'import/no-unresolved': 2,
     'import/no-cycle': 2,
     'import/first': 0,
-    'import/order': [2, {
-      'newlines-between': 'never',
-      'groups': [
-        'internal',
-        'builtin',
-        'external',
-        'parent',
-        'sibling',
-        'index',
-      ],
-    }],
+    'import/order': 0,
     'import/newline-after-import': 2,
     'import/prefer-default-export': 0,
     'import/no-commonjs': 0,
