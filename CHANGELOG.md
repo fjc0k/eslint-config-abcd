@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.5.0](https://github.com/fjc0k/eslint-config-io/compare/v0.4.1...v0.5.0) (2019-03-21)
+
+
+### Features
+
+* disable import/order ([8e2fe9f](https://github.com/fjc0k/eslint-config-io/commit/8e2fe9f))
+
+
+
 ## [0.4.1](https://github.com/fjc0k/eslint-config-io/compare/v0.4.0...v0.4.1) (2019-03-21)
 
 
