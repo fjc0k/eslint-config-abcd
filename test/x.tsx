@@ -14,6 +14,10 @@ export default class X extends React.Component {
     return 1
   }
 
+  constructor(props) {
+    super(props)
+  }
+
   componentWillMount() {
   }
 
