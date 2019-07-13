@@ -3,7 +3,6 @@ import './x.css'
 import { relative } from 'path'
 
 console.log(relative)
-
 export type x = number
 
 export interface YY {
@@ -17,9 +16,9 @@ export function getType(value: any): string {
 }
 
 export class MyClass {
-  static x = 1
+  static x = 1;
 
-  private yy = 2
+  private yy = 2;
 
   public foo() {
     //...
@@ -31,7 +30,6 @@ export class MyClass {
 }
 
 export type DisposerItemName = string | number
-
 export type Dispose = () => void
 
 /**
@@ -45,7 +43,7 @@ export default class Disposer {
    */
   private jar: {
     [name: string]: Dispose[],
-  } = Object.create(null)
+  } = Object.create(null);
 
   /**
    * 将待处置项目加入容器。
@@ -118,11 +116,9 @@ const obj = {
   y: { z: 1, fn: () => {} },
   n: 0.2,
 }
-
 obj
   .y
   .fn()
-
 const x: number = 1
 switch (x) {
   case 1:
@@ -142,9 +138,13 @@ export function p(): Promise<{
 class Component<T> {}
 
 export class Button extends Component<{
-
+  s: number,
 }> {
   public constructor() {
     super()
   }
+}
+
+export interface TTD {
+  x: string,
 }
