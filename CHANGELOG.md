@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.6.0](https://github.com/fjc0k/eslint-config-io/compare/v0.5.1...v0.6.0) (2019-07-13)
+
+
+### Features
+
+* 升级依赖 ([62d5b67](https://github.com/fjc0k/eslint-config-io/commit/62d5b67))
+
+
+
 ## [0.5.1](https://github.com/fjc0k/eslint-config-io/compare/v0.5.0...v0.5.1) (2019-04-09)
 
 
