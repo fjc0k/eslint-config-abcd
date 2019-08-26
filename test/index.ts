@@ -1,6 +1,6 @@
 import './eff'
 import './x.css'
-import { relative } from 'path'
+import {relative} from 'path'
 
 console.log(relative)
 export type x = number
@@ -95,7 +95,7 @@ export function forOwn<
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      if (callback(obj[key], key as K, obj) === false) {
+      if (callback((obj as any)[key], key as K, obj) === false) {
         break
       }
     }
@@ -113,7 +113,7 @@ export const isInNode = (
 )
 const obj = {
   x: 1,
-  y: { z: 1, fn: () => {} },
+  y: {z: 1, fn: () => {}},
   n: 0.2,
 }
 obj
@@ -132,7 +132,7 @@ switch (x) {
 export function p(): Promise<{
   x: number,
 }> {
-  return Promise.resolve({ x: 1 })
+  return Promise.resolve({x: 1})
 }
 
 class Component<T> {}

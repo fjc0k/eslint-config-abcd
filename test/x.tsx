@@ -1,5 +1,5 @@
 import './fn'
-import React from 'react'
+import React, {useState} from 'react'
 
 export default class X extends React.Component {
   static yyy = 3
@@ -57,4 +57,9 @@ export default class X extends React.Component {
       </div>
     )
   }
+}
+
+export function Test() {
+  const r = useState()
+  return r
 }

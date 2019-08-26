@@ -8,7 +8,7 @@ const x3 = new Promise(() => {})
 
 console.log(x3)
 
-const obj1 = { x: 1 }
+const obj1 = {x: 1}
 
 const arr = [1, 2, 3, 4][0]
 

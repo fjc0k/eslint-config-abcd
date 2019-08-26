@@ -2,7 +2,9 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
-    ecmaFeatures: { jsx: true },
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   extends: [
     'eslint:recommended',
@@ -11,6 +13,7 @@ module.exports = {
     'sort-imports-es6-autofix',
     'import',
     'react',
+    'react-hooks',
   ],
   settings: {
     'import/resolver': {
@@ -36,26 +39,32 @@ module.exports = {
   },
   rules: {
     // 使用两个空格缩进
-    'indent': [2, 2, { SwitchCase: 1 }],
+    'indent': [2, 2, {
+      SwitchCase: 1,
+    }],
 
     // 禁止空块语句，除了 catch
-    'no-empty': [2, { allowEmptyCatch: true }],
+    'no-empty': [2, {
+      allowEmptyCatch: true,
+    }],
 
     // 字符串使用单引号，允许使用反勾号
-    'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+    'quotes': [2, 'single', {
+      avoidEscape: true,
+      allowTemplateLiterals: true,
+    }],
 
     // 行末无分号，必须出现分号时，应在行首
     'semi': [2, 'never'],
     'semi-style': [2, 'first'],
 
-    // 花括号之间有空格
-    'object-curly-spacing': [2, 'always'],
-
     // 允许: if (false) return
     'curly': [2, 'multi-line'],
 
     // 允许: fn && fn()
-    'no-unused-expressions': [2, { allowShortCircuit: true }],
+    'no-unused-expressions': [2, {
+      allowShortCircuit: true,
+    }],
 
     // 允许注释以小写字母打头
     'capitalized-comments': 0,
@@ -98,7 +107,10 @@ module.exports = {
     'array-bracket-newline': [2, 'consistent'],
 
     // 在逗号后面使用空格
-    'comma-spacing': [2, { before: false, after: true }],
+    'comma-spacing': [2, {
+      before: false,
+      after: true,
+    }],
 
     // 键及其值之间只能有一个空格
     'key-spacing': 2,
@@ -126,7 +138,9 @@ module.exports = {
     }],
 
     // 中缀操作符周围有空格
-    'space-infix-ops': [2, { int32Hint: false }],
+    'space-infix-ops': [2, {
+      int32Hint: false,
+    }],
 
     // 箭头函数周围应有空格
     'arrow-spacing': 2,
@@ -137,8 +151,14 @@ module.exports = {
     // 禁止块内填充
     'padded-blocks': [2, 'never'],
 
-    //  强制圆括号内没有空格
+    // 强制圆括号内没有空格
     'space-in-parens': [2, 'never'],
+
+    // 强制中括号内没有空格
+    'array-bracket-spacing': [2, 'never'],
+
+    // 强制大括号内没有空格
+    'object-curly-spacing': [2, 'never'],
 
     // 要求构造函数首字母大写
     'new-cap': 2,
@@ -157,10 +177,14 @@ module.exports = {
     'linebreak-style': [2, 'unix'],
 
     // 将对象的属性放在不同的行上，但允许将所有的放在一行上
-    'object-property-newline': [2, { allowAllPropertiesOnSameLine: true }],
+    'object-property-newline': [2, {
+      allowAllPropertiesOnSameLine: true,
+    }],
 
     // 对象换行
-    'object-curly-newline': [2, { consistent: true }],
+    'object-curly-newline': [2, {
+      consistent: true,
+    }],
 
     // 函数参数换行
     'function-paren-newline': [2, 'consistent'],
@@ -217,7 +241,9 @@ module.exports = {
       html: true,
     }],
     'react/jsx-closing-tag-location': 2,
-    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [1, {
+      extensions: ['.jsx', '.tsx'],
+    }],
     'react/jsx-handler-names': [2, {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
@@ -267,6 +293,10 @@ module.exports = {
         'render',
       ],
     }],
+
+    // React Hooks
+    'react-hooks/rules-of-hooks': 2,
+    'react-hooks/exhaustive-deps': 1,
   },
   overrides: [
     {
