@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.8.0](https://github.com/fjc0k/eslint-config-io/compare/v0.7.0...v0.8.0) (2019-08-26)
+
+
+### Features
+
+* disable react-hooks/exhaustive-deps ([4dc1a56](https://github.com/fjc0k/eslint-config-io/commit/4dc1a56))
+
+
+
 # [0.7.0](https://github.com/fjc0k/eslint-config-io/compare/v0.6.0...v0.7.0) (2019-08-26)
 
 
