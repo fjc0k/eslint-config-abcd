@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.1](https://github.com/fjc0k/eslint-config-io/compare/v0.8.0...v0.8.1) (2019-09-04)
+
+
+### Bug Fixes
+
+* remove React Hooks ([8dc218d](https://github.com/fjc0k/eslint-config-io/commit/8dc218d))
+
+
+
 # [0.8.0](https://github.com/fjc0k/eslint-config-io/compare/v0.7.0...v0.8.0) (2019-08-26)
 
 
