@@ -281,6 +281,7 @@ module.exports = {
     }],
     'react/sort-comp': [2, {
       order: [
+        'static-variables',
         'static-methods',
         'instance-variables',
         'getters',
@@ -314,7 +315,10 @@ module.exports = {
             requireLast: true,
           },
         }],
-        '@typescript-eslint/no-angle-bracket-type-assertion': 2,
+        '@typescript-eslint/consistent-type-assertions': [2, {
+          assertionStyle: 'as',
+          objectLiteralTypeAssertions: 'allow',
+        }],
         '@typescript-eslint/type-annotation-spacing': 2,
         'indent': 0,
         '@typescript-eslint/indent': [2, 2],

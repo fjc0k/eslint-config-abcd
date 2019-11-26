@@ -4,9 +4,9 @@ import React, {useState} from 'react'
 export default class X extends React.Component {
   static yyy = 3
 
-  static ff() {}
-
   static y2yy = 3
+
+  static ff() {}
 
   xd = 1
 
@@ -14,7 +14,7 @@ export default class X extends React.Component {
     return 1
   }
 
-  constructor(props) {
+  constructor(props: any) {
     super(props)
   }
 

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "newLine": "LF",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  }
+}
