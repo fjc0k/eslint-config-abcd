@@ -1,6 +1,9 @@
 console.log(111)
 
-const x = window?.top
+const x = () => {
+  const y = window?.top
+  return y
+}
 
 console.log(x)
 

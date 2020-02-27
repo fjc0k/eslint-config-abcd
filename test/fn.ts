@@ -1,4 +1,9 @@
 export default function fn(): void {
   const x = (): void => {}
-  return void(x)
+  console.log(x)
+  const xx = []
+    .map<number>(() => {
+    return 1
+  })
+  return void(xx)
 }
