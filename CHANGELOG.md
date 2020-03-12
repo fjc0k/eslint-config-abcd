@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.4](https://github.com/fjc0k/eslint-config-io/compare/v0.8.3...v0.8.4) (2020-03-12)
+
+
+### Features
+
+* more typescript features ([9d4716b](https://github.com/fjc0k/eslint-config-io/commit/9d4716b1a19039440b789c280237004ff29283e1))
+
 ### [0.8.3](https://github.com/fjc0k/eslint-config-io/compare/v0.8.2...v0.8.3) (2020-02-27)
 
 ### [0.8.2](https://github.com/fjc0k/eslint-config-io/compare/v0.8.1...v0.8.2) (2019-11-26)
