@@ -13,9 +13,13 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "jsx": "react",
+    "baseUrl": ".",
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@@/*": ["test/*"]
+    },
   }
 }

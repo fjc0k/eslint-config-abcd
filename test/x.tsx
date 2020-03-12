@@ -1,6 +1,13 @@
 import './fn'
 import React, {useState} from 'react'
 
+if (React) {
+  console.log(1)
+}
+else {
+  console.log(2)
+}
+
 export default class X extends React.Component {
   static yyy = 3
 
@@ -29,7 +36,8 @@ export default class X extends React.Component {
     try {
       const x = 1
       console.log(x)
-    } catch (e) {
+    }
+    catch (e) {
 
     }
   }

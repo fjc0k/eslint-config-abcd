@@ -15,15 +15,21 @@ module.exports = {
     'react',
   ],
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': [
+        '.ts',
+        '.tsx',
+      ],
+    },
     'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
       node: {
         extensions: [
           '.js',
           '.jsx',
           '.json',
-          '.ts',
-          '.d.ts',
-          '.tsx',
           '.vue',
         ],
       },
@@ -40,6 +46,7 @@ module.exports = {
     // 使用两个空格缩进
     'indent': [2, 2, {
       SwitchCase: 1,
+      ignoredNodes: ['TemplateLiteral *'],
     }],
 
     // 禁止空块语句，除了 catch
@@ -159,8 +166,12 @@ module.exports = {
     // 强制大括号内没有空格
     'object-curly-spacing': [2, 'never'],
 
-    // 要求构造函数首字母大写
-    'new-cap': 2,
+    // 要求构造函数首字母大写，但不要求调用时前置 new 操作符
+    'new-cap': [2, {
+      newIsCap: true,
+      capIsNew: false,
+      properties: true,
+    }],
 
     // 文件末尾保留一行空行
     'eol-last': [2, 'always'],
@@ -208,6 +219,11 @@ module.exports = {
 
     // 禁止可以表达为更简单结构的三元操作符
     'no-unneeded-ternary': 2,
+
+    // 大括号应在起始行开始，且允许一行
+    'brace-style': [2, 'stroustrup', {
+      allowSingleLine: true,
+    }],
 
     // import
     'sort-imports-es6-autofix/sort-imports-es6': [2, {
@@ -303,6 +319,43 @@ module.exports = {
       ],
       rules: {
         'no-undef': 0,
+        'brace-style': 0,
+        '@typescript-eslint/brace-style': [2, 'stroustrup', {
+          allowSingleLine: true,
+        }],
+        'comma-spacing': 0,
+        '@typescript-eslint/comma-spacing': [2, {
+          before: false,
+          after: true,
+        }],
+        'indent': 0,
+        '@typescript-eslint/indent': [2, 2, {
+          SwitchCase: 1,
+          ignoredNodes: ['TemplateLiteral *'],
+        }],
+        'no-dupe-class-members': 0,
+        '@typescript-eslint/no-dupe-class-members': [2],
+        'no-unused-expressions': 0,
+        '@typescript-eslint/no-unused-expressions': [2, {
+          allowShortCircuit: true,
+        }],
+        'no-unused-vars': 0,
+        '@typescript-eslint/no-unused-vars': [2, {
+          argsIgnorePattern: '^_',
+        }],
+        'quotes': 0,
+        '@typescript-eslint/quotes': [2, 'single', {
+          avoidEscape: true,
+          allowTemplateLiterals: true,
+        }],
+        'semi': 0,
+        '@typescript-eslint/semi': [2, 'never'],
+        'space-before-function-paren': 0,
+        '@typescript-eslint/space-before-function-paren': [2, {
+          anonymous: 'always',
+          named: 'never',
+          asyncArrow: 'always',
+        }],
         '@typescript-eslint/adjacent-overload-signatures': 2,
         '@typescript-eslint/class-name-casing': 2,
         '@typescript-eslint/member-delimiter-style': [2, {
@@ -320,12 +373,6 @@ module.exports = {
           objectLiteralTypeAssertions: 'allow',
         }],
         '@typescript-eslint/type-annotation-spacing': 2,
-        'indent': 0,
-        '@typescript-eslint/indent': [2, 2],
-        'no-unused-vars': 0,
-        '@typescript-eslint/no-unused-vars': [2, {
-          argsIgnorePattern: '^_',
-        }],
       },
     },
   ],

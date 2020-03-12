@@ -1,8 +1,28 @@
 import './eff'
 import './x.css'
+import xx from '@@/fn'
+import {IDts} from '@@/dts'
 import {relative} from 'path'
 
-console.log(relative)
+export type IDts2 = IDts
+
+const rrr = {
+  xx: () => {},
+}
+
+function x1() {
+  if (rrr.xx) {
+    rrr?.xx()
+  }
+  const x = `
+    ${[1, 2].map(i => {
+      return i
+    }).join(',')}
+  `
+  return x
+}
+
+console.log(x1, xx, relative)
 export type x = number
 
 export interface YY {
@@ -16,9 +36,11 @@ export function getType(value: any): string {
 }
 
 export class MyClass {
-  static x = 1;
+  static x = 1
 
-  private yy = 2;
+  private yy = 2
+
+  foo1 = () => {}
 
   public foo() {
     //...
@@ -43,7 +65,7 @@ export default class Disposer {
    */
   private jar: {
     [name: string]: Dispose[],
-  } = Object.create(null);
+  } = Object.create(null)
 
   /**
    * 将待处置项目加入容器。
@@ -59,14 +81,17 @@ export default class Disposer {
     ]
   }
 
+  public dispose(name: string): void
+
+  public dispose(name: number): number
+
   /**
    * 处置项目。
    *
    * @param name 欲处置项目名称
    */
-  public dispose(name: DisposerItemName): void {
-    (this.jar[name] || /* istanbul ignore next */ []).forEach(dispose => dispose())
-    delete this.jar[name]
+  public dispose(_name: any): any {
+    return
   }
 
   /**
