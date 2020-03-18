@@ -1,8 +1,8 @@
 import './eff'
 import './x.css'
 import xx from '@@/fn'
-import {IDts} from '@@/dts'
-import {relative} from 'path'
+import { IDts } from '@@/dts'
+import { relative } from 'path'
 
 export type IDts2 = IDts
 
@@ -15,9 +15,11 @@ function x1() {
     rrr?.xx()
   }
   const x = `
-    ${[1, 2].map(i => {
-      return i
-    }).join(',')}
+    ${[1, 2]
+      .map(i => {
+        return i
+      })
+      .join(',')}
   `
   return x
 }
@@ -75,10 +77,7 @@ export default class Disposer {
    */
   public add(name: DisposerItemName, dispose: Dispose | Dispose[]): void {
     dispose = Array.isArray(dispose) ? dispose : [dispose]
-    this.jar[name] = [
-      ...(this.jar[name] || []),
-      ...dispose,
-    ]
+    this.jar[name] = [...(this.jar[name] || []), ...dispose]
   }
 
   public dispose(name: string): void
@@ -112,11 +111,8 @@ export default class Disposer {
  */
 export function forOwn<
   T extends { [key: string]: any },
-  K extends Extract<keyof T, string>,
->(
-  obj: T,
-  callback: (value: T[K], key: K, obj: T) => any,
-): void {
+  K extends Extract<keyof T, string>
+>(obj: T, callback: (value: T[K], key: K, obj: T) => any): void {
   for (const key in obj) {
     /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
@@ -126,24 +122,20 @@ export function forOwn<
     }
   }
 }
-export const isInNode2 = (
-  typeof process !== 'undefined'
+export const isInNode2
+  = typeof process !== 'undefined'
     ? process.versions != null
     : process!.versions.node != null
-)
-export const isInNode = (
-  typeof process !== 'undefined'
-    && process.versions != null
-    && process.versions.node != null
-)
+export const isInNode
+  = typeof process !== 'undefined'
+  && process.versions != null
+  && process.versions.node != null
 const obj = {
   x: 1,
-  y: {z: 1, fn: () => {}},
-  n: 0.2,
+  y: { z: 1, fn: () => {} },
+  n: [0.2],
 }
-obj
-  .y
-  .fn()
+obj.y.fn()
 const x: number = 1
 switch (x) {
   case 1:
@@ -157,7 +149,7 @@ switch (x) {
 export function p(): Promise<{
   x: number,
 }> {
-  return Promise.resolve({x: 1})
+  return Promise.resolve({ x: 1 })
 }
 
 class Component<T> {}

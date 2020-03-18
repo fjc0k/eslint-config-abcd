@@ -1,5 +1,5 @@
 import './fn'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 if (React) {
   console.log(1)

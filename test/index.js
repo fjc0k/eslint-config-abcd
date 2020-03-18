@@ -8,7 +8,7 @@ const x3 = new Promise(() => {})
 
 console.log(x3)
 
-const obj1 = {x: 1}
+const obj1 = { x: 1 }
 
 const arr = [1, 2, 3, 4][0]
 
@@ -18,11 +18,7 @@ const obj = {
   z: 66771,
 }
 
-console.log(
-  obj,
-  obj1, 22,
-  arr, 666, 555, 555,
-)
+console.log(obj, obj1, 22, arr, 666, 555, 555)
 
 const noop = () => {}
 
@@ -32,9 +28,7 @@ function yyx() {
   return 1 + 1
 }
 
-const fn = async () => {
-
-}
+const fn = async () => {}
 
 console.log(yyx, fn)
 

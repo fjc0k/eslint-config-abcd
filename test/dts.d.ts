@@ -1,3 +1,1 @@
-export interface IDts {
-
-}
+export interface IDts {}

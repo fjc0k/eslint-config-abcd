@@ -6,31 +6,18 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: [
-    'eslint:recommended',
-  ],
-  plugins: [
-    'sort-imports-es6-autofix',
-    'import',
-    'react',
-  ],
+  extends: ['eslint:recommended'],
+  plugins: ['sort-imports-es6-autofix', 'import', 'react'],
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': [
-        '.ts',
-        '.tsx',
-      ],
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
       },
       node: {
-        extensions: [
-          '.js',
-          '.jsx',
-          '.json',
-        ],
+        extensions: ['.js', '.jsx', '.json'],
       },
     },
   },
@@ -43,21 +30,32 @@ module.exports = {
   },
   rules: {
     // 使用两个空格缩进
-    'indent': [2, 2, {
-      SwitchCase: 1,
-      ignoredNodes: ['TemplateLiteral *'],
-    }],
+    'indent': [
+      2,
+      2,
+      {
+        SwitchCase: 1,
+        ignoredNodes: ['TemplateLiteral *'],
+      },
+    ],
 
     // 禁止空块语句，除了 catch
-    'no-empty': [2, {
-      allowEmptyCatch: true,
-    }],
+    'no-empty': [
+      2,
+      {
+        allowEmptyCatch: true,
+      },
+    ],
 
     // 字符串使用单引号，允许使用反勾号
-    'quotes': [2, 'single', {
-      avoidEscape: true,
-      allowTemplateLiterals: true,
-    }],
+    'quotes': [
+      2,
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
 
     // 行末无分号，必须出现分号时，应在行首
     'semi': [2, 'never'],
@@ -67,9 +65,12 @@ module.exports = {
     'curly': [2, 'multi-line'],
 
     // 允许: fn && fn()
-    'no-unused-expressions': [2, {
-      allowShortCircuit: true,
-    }],
+    'no-unused-expressions': [
+      2,
+      {
+        allowShortCircuit: true,
+      },
+    ],
 
     // 允许注释以小写字母打头
     'capitalized-comments': 0,
@@ -100,22 +101,28 @@ module.exports = {
     'no-console': 0,
 
     // 数组或对象多行时应有拖尾逗号
-    'comma-dangle': [2, {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'always-multiline',
-    }],
+    'comma-dangle': [
+      2,
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+      },
+    ],
 
     // 如果数组元素内或元素间有换行，则要求换行
     'array-bracket-newline': [2, 'consistent'],
 
     // 在逗号后面使用空格
-    'comma-spacing': [2, {
-      before: false,
-      after: true,
-    }],
+    'comma-spacing': [
+      2,
+      {
+        before: false,
+        after: true,
+      },
+    ],
 
     // 键及其值之间只能有一个空格
     'key-spacing': 2,
@@ -136,16 +143,22 @@ module.exports = {
     'space-before-blocks': 2,
 
     // 函数圆括号之前有一个空格
-    'space-before-function-paren': [2, {
-      anonymous: 'always',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
+    'space-before-function-paren': [
+      2,
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always',
+      },
+    ],
 
     // 中缀操作符周围有空格
-    'space-infix-ops': [2, {
-      int32Hint: false,
-    }],
+    'space-infix-ops': [
+      2,
+      {
+        int32Hint: false,
+      },
+    ],
 
     // 箭头函数周围应有空格
     'arrow-spacing': 2,
@@ -162,38 +175,57 @@ module.exports = {
     // 强制中括号内没有空格
     'array-bracket-spacing': [2, 'never'],
 
-    // 强制大括号内没有空格
-    'object-curly-spacing': [2, 'never'],
+    // 强制大括号内有空格
+    'object-curly-spacing': [
+      2,
+      'always',
+      {
+        arraysInObjects: false,
+        objectsInObjects: true,
+      },
+    ],
 
     // 要求构造函数首字母大写，但不要求调用时前置 new 操作符
-    'new-cap': [2, {
-      newIsCap: true,
-      capIsNew: false,
-      properties: true,
-    }],
+    'new-cap': [
+      2,
+      {
+        newIsCap: true,
+        capIsNew: false,
+        properties: true,
+      },
+    ],
 
     // 文件末尾保留一行空行
     'eol-last': [2, 'always'],
 
     // 允许空一行
-    'no-multiple-empty-lines': [2, {
-      max: 1,
-      maxBOF: 0,
-      maxEOF: 0,
-    }],
+    'no-multiple-empty-lines': [
+      2,
+      {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 0,
+      },
+    ],
 
     // 使用 \n 换行
     'linebreak-style': [2, 'unix'],
 
     // 将对象的属性放在不同的行上，但允许将所有的放在一行上
-    'object-property-newline': [2, {
-      allowAllPropertiesOnSameLine: true,
-    }],
+    'object-property-newline': [
+      2,
+      {
+        allowAllPropertiesOnSameLine: true,
+      },
+    ],
 
     // 对象换行
-    'object-curly-newline': [2, {
-      consistent: true,
-    }],
+    'object-curly-newline': [
+      2,
+      {
+        consistent: true,
+      },
+    ],
 
     // 函数参数换行
     'function-paren-newline': [2, 'consistent'],
@@ -220,18 +252,25 @@ module.exports = {
     'no-unneeded-ternary': 2,
 
     // 大括号应在起始行开始，且允许一行
-    'brace-style': [2, 'stroustrup', {
-      allowSingleLine: true,
-    }],
+    'brace-style': [
+      2,
+      'stroustrup',
+      {
+        allowSingleLine: true,
+      },
+    ],
 
     // import
-    'sort-imports-es6-autofix/sort-imports-es6': [2, {
-      ignoreCase: true,
-      ignoreMemberSort: false,
-      memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
-    }],
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      2,
+      {
+        ignoreCase: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+      },
+    ],
     'import/no-unresolved': 0,
-    'import/no-cycle': 2,
+    'import/no-cycle': 0,
     'import/first': 0,
     'import/order': 0,
     'import/newline-after-import': 2,
@@ -245,132 +284,199 @@ module.exports = {
     // react
     'jsx-quotes': [2, 'prefer-single'],
     'react/jsx-uses-react': 2,
-    'react/jsx-closing-bracket-location': [2, {
-      selfClosing: 'line-aligned',
-      nonEmpty: 'after-props',
-    }],
+    'react/jsx-closing-bracket-location': [
+      2,
+      {
+        selfClosing: 'line-aligned',
+        nonEmpty: 'after-props',
+      },
+    ],
     'react/jsx-boolean-value': [2, 'always'],
-    'react/self-closing-comp': [2, {
-      component: true,
-      html: true,
-    }],
+    'react/self-closing-comp': [
+      2,
+      {
+        component: true,
+        html: true,
+      },
+    ],
     'react/jsx-closing-tag-location': 2,
-    'react/jsx-filename-extension': [1, {
-      extensions: ['.jsx', '.tsx'],
-    }],
-    'react/jsx-handler-names': [2, {
-      eventHandlerPrefix: 'handle',
-      eventHandlerPropPrefix: 'on',
-    }],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.jsx', '.tsx'],
+      },
+    ],
+    'react/jsx-handler-names': [
+      2,
+      {
+        eventHandlerPrefix: 'handle',
+        eventHandlerPropPrefix: 'on',
+      },
+    ],
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
-    'react/jsx-curly-spacing': [2, {
-      when: 'never',
-      children: true,
-    }],
+    'react/jsx-curly-spacing': [
+      2,
+      {
+        when: 'never',
+        children: true,
+      },
+    ],
     'react/jsx-equals-spacing': [2, 'never'],
     'react/jsx-pascal-case': 2,
-    'react/jsx-tag-spacing': [2, {
-      closingSlash: 'never',
-      beforeSelfClosing: 'always',
-      afterOpening: 'never',
-      beforeClosing: 'never',
-    }],
+    'react/jsx-tag-spacing': [
+      2,
+      {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never',
+        beforeClosing: 'never',
+      },
+    ],
     'react/jsx-uses-vars': 2,
-    'react/jsx-wrap-multilines': [2, {
-      declaration: 'parens-new-line',
-      assignment: 'parens-new-line',
-      return: 'parens-new-line',
-      arrow: 'parens-new-line',
-      condition: 'parens-new-line',
-      logical: 'parens-new-line',
-      prop: 'parens-new-line',
-    }],
+    'react/jsx-wrap-multilines': [
+      2,
+      {
+        declaration: 'parens-new-line',
+        assignment: 'parens-new-line',
+        return: 'parens-new-line',
+        arrow: 'parens-new-line',
+        condition: 'parens-new-line',
+        logical: 'parens-new-line',
+        prop: 'parens-new-line',
+      },
+    ],
     'react/jsx-key': 2,
     'react/no-array-index-key': 2,
     'react/react-in-jsx-scope': 2,
-    'react/jsx-sort-props': [2, {
-      callbacksLast: true,
-      noSortAlphabetically: true,
-      reservedFirst: true,
-    }],
-    'react/sort-comp': [2, {
-      order: [
-        'static-variables',
-        'static-methods',
-        'instance-variables',
-        'getters',
-        'setters',
-        'lifecycle',
-        'everything-else',
-        '/^handle[A-Z].+$/',
-        '/^render[A-Z].+$/',
-        'render',
-      ],
-    }],
+    'react/jsx-sort-props': [
+      2,
+      {
+        callbacksLast: true,
+        noSortAlphabetically: true,
+        reservedFirst: true,
+      },
+    ],
+    'react/sort-comp': [
+      2,
+      {
+        order: [
+          'static-variables',
+          'static-methods',
+          'instance-variables',
+          'getters',
+          'setters',
+          'lifecycle',
+          'everything-else',
+          '/^handle[A-Z].+$/',
+          '/^render[A-Z].+$/',
+          'render',
+        ],
+      },
+    ],
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
-      plugins: [
-        '@typescript-eslint',
-      ],
+      parserOptions: {
+        // The "project" path is resolved relative to parserOptions.tsconfigRootDir.
+        // Your local .eslintrc.js must specify that parserOptions.tsconfigRootDir=__dirname.
+        project: './tsconfig.json',
+
+        // Allow parsing of newer ECMAScript constructs used in TypeScript source code.  Although tsconfig.json
+        // may allow only a small subset of ES2018 features, this liberal setting ensures that ESLint will correctly
+        // parse whatever is encountered.
+        ecmaVersion: 2018,
+
+        sourceType: 'module',
+      },
+      plugins: ['@typescript-eslint'],
       rules: {
         'no-undef': 0,
         'brace-style': 0,
-        '@typescript-eslint/brace-style': [2, 'stroustrup', {
-          allowSingleLine: true,
-        }],
+        '@typescript-eslint/brace-style': [
+          2,
+          'stroustrup',
+          {
+            allowSingleLine: true,
+          },
+        ],
         'comma-spacing': 0,
-        '@typescript-eslint/comma-spacing': [2, {
-          before: false,
-          after: true,
-        }],
+        '@typescript-eslint/comma-spacing': [
+          2,
+          {
+            before: false,
+            after: true,
+          },
+        ],
         'indent': 0,
-        '@typescript-eslint/indent': [2, 2, {
-          SwitchCase: 1,
-          ignoredNodes: ['TemplateLiteral *'],
-        }],
+        '@typescript-eslint/indent': [
+          2,
+          2,
+          {
+            SwitchCase: 1,
+            ignoredNodes: ['TemplateLiteral *'],
+          },
+        ],
         'no-dupe-class-members': 0,
         '@typescript-eslint/no-dupe-class-members': [2],
         'no-unused-expressions': 0,
-        '@typescript-eslint/no-unused-expressions': [2, {
-          allowShortCircuit: true,
-        }],
+        '@typescript-eslint/no-unused-expressions': [
+          2,
+          {
+            allowShortCircuit: true,
+          },
+        ],
         'no-unused-vars': 0,
-        '@typescript-eslint/no-unused-vars': [2, {
-          argsIgnorePattern: '^_',
-        }],
+        '@typescript-eslint/no-unused-vars': [
+          2,
+          {
+            argsIgnorePattern: '^_',
+          },
+        ],
         'quotes': 0,
-        '@typescript-eslint/quotes': [2, 'single', {
-          avoidEscape: true,
-          allowTemplateLiterals: true,
-        }],
+        '@typescript-eslint/quotes': [
+          2,
+          'single',
+          {
+            avoidEscape: true,
+            allowTemplateLiterals: true,
+          },
+        ],
         'semi': 0,
         '@typescript-eslint/semi': [2, 'never'],
         'space-before-function-paren': 0,
-        '@typescript-eslint/space-before-function-paren': [2, {
-          anonymous: 'always',
-          named: 'never',
-          asyncArrow: 'always',
-        }],
+        '@typescript-eslint/space-before-function-paren': [
+          2,
+          {
+            anonymous: 'always',
+            named: 'never',
+            asyncArrow: 'always',
+          },
+        ],
         '@typescript-eslint/adjacent-overload-signatures': 2,
         '@typescript-eslint/class-name-casing': 2,
-        '@typescript-eslint/member-delimiter-style': [2, {
-          singleline: {
-            delimiter: 'comma',
-            requireLast: false,
+        '@typescript-eslint/member-delimiter-style': [
+          2,
+          {
+            singleline: {
+              delimiter: 'comma',
+              requireLast: false,
+            },
+            multiline: {
+              delimiter: 'comma',
+              requireLast: true,
+            },
           },
-          multiline: {
-            delimiter: 'comma',
-            requireLast: true,
+        ],
+        '@typescript-eslint/consistent-type-assertions': [
+          2,
+          {
+            assertionStyle: 'as',
+            objectLiteralTypeAssertions: 'allow',
           },
-        }],
-        '@typescript-eslint/consistent-type-assertions': [2, {
-          assertionStyle: 'as',
-          objectLiteralTypeAssertions: 'allow',
-        }],
+        ],
         '@typescript-eslint/type-annotation-spacing': 2,
       },
     },
