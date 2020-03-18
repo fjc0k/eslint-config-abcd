@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.5](https://github.com/fjc0k/eslint-config-io/compare/v0.8.4...v0.8.5) (2020-03-18)
+
+
+### Features
+
+* import/no-unresolved 0 ([4e2456d](https://github.com/fjc0k/eslint-config-io/commit/4e2456d574c1b26fdc4e2bd7557e75ea0d242735))
+
 ### [0.8.4](https://github.com/fjc0k/eslint-config-io/compare/v0.8.3...v0.8.4) (2020-03-12)
 
 
