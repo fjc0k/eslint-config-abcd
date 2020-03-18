@@ -260,6 +260,9 @@ module.exports = {
       },
     ],
 
+    // 允许中文空格
+    'no-irregular-whitespace': 0,
+
     // import
     'sort-imports-es6-autofix/sort-imports-es6': [
       2,
