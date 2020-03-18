@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-io",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "ESLint config.",
   "main": "src/index.js",
   "homepage": "https://github.com/fjc0k/eslint-config-io",
